@@ -5,74 +5,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DuoTech - Technology Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
         }
         .animate-float { animation: float 4s ease-in-out infinite; }
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #6b46c1, #3b82f6); }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(59, 130, 246, 0.9), rgba(107, 70, 193, 0.9)), url(images/hero/main-hero.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.05); }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="bg-gray-50">
     <!-- Navigation -->
     <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-md z-50">
         <div class="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
-            <a href="#" class="text-2xl font-bold text-blue-600">DuoTech</a>
-            <div class="hidden md:flex space-x-6">
-                <a href="#services" class="hover:text-blue-600">Services</a>
-                <a href="#projects" class="hover:text-blue-600">Projects</a>
-                <a href="#about" class="hover:text-blue-600">About</a>
-                <a href="#contact" class="hover:text-blue-600">Contact</a>
-                <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">Let's Talk</button>
+            <a href="#" class="text-2xl font-bold text-blue-600"><img src="images/logo/duo.png" alt="DuoTech Logo" class="w-24"></a>
+            <a href="#" class="text-2xl font-bold text-blue-600">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1560 1040">
+              	<path fill="#fad201" d="m0 0h1560v1040H0z"/>
+              	<path fill="#00a3e0" d="m0 0h1560v520H0z"/>
+              	<path fill="#20603d" d="m0 780h1560v260H0z"/>
+              	<g transform="translate(1280,272)">
+              		<path fill="#e5be01" d="m0-168L6.79-51.56l36.69-110.72L19.9-48.04 84-145.49 31.66-41.25l87.13-77.54-77.54 87.13L145.49-84 48.04-19.9l114.24-23.58L51.56-6.79 168 0 51.56 6.79l110.72 36.69L48.04 19.9 145.49 84 41.25 31.66l77.54 87.13-87.13-77.54L84 145.49 19.9 48.04l23.58 114.24L6.79 51.56 0 168-6.79 51.56-43.48 162.28-19.9 48.04-84 145.49-31.66 41.25l-87.13 77.54 77.54-87.13L-145.49 84l97.45-64.1-114.24 23.58L-51.56 6.79-168 0-51.56-6.79-162.28-43.48-48.04-19.9-145.49-84-41.25-31.66l-77.54-87.13 87.13 77.54L-84-145.49l64.1 97.45-23.58-114.24L-6.79-51.56z"/>
+              		<circle fill="none" stroke="#00a3e0" r="49" stroke-width="6"/>
+              	</g>
+              </svg>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#services" class="text-gray-700 hover:text-blue-600 transition">Services</a>
+                <a href="#projects" class="text-gray-700 hover:text-blue-600 transition">Projects</a>
+                <a href="#team" class="text-gray-700 hover:text-blue-600 transition">Team</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-700 hover:text-blue-600 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 transition">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20"  viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-indigo-50 text-center">
-        <div class="max-w-3xl mx-auto">
-            <span class="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm">Trusted by Leading Organizations</span>
-            <h1 class="text-4xl font-bold mt-6">We Build Digital Products That Drive Business Growth</h1>
-            <p class="text-lg text-gray-600 mt-4">Transform your ideas into reality with our expert team of developers, designers, and consultants.</p>
-            <div class="mt-6 flex justify-center space-x-4">
-                <button class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition">Start Project</button>
-                <button class="border border-blue-600 text-blue-600 px-8 py-3 rounded-full hover:bg-blue-50 transition">View Our Work</button>
+    <section class="pt-32 pb-20 hero-gradient">
+        <div class="max-w-3xl mx-auto text-center px-4">
+            <span class="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">Trusted by Leading Organizations</span>
+            <h1 class="text-5xl font-bold mt-6 text-white">We Build Digital Products That Drive Business Growth</h1>
+            <p class="text-lg text-gray-200 mt-4">Transform your ideas into reality with our expert team of developers, designers, and consultants.</p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <button class="bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-gray-100 transition">Start Project</button>
+                <button class="border border-white text-white px-8 py-3 rounded-full hover:bg-white/10 transition"><a href="#projects">View Our Work</a></button>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="py-20">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl font-bold">Our Services</h2>
+        <div class="max-w-7xl mx-auto text-center px-4">
+            <h2 class="text-4xl font-bold text-gray-900">Our Services</h2>
             <p class="text-gray-600 mt-2">Comprehensive solutions for your business needs</p>
             <div class="grid md:grid-cols-3 gap-8 mt-12">
-                <div class="p-6 bg-white rounded-lg shadow hover:shadow-xl transition">
-                    <h3 class="text-xl font-semibold">Custom Software Development</h3>
+                <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition hover-scale">
+                    <h3 class="text-xl font-semibold text-gray-900">Custom Software Development</h3>
                     <p class="text-gray-600 mt-2">Tailored software solutions for unique challenges.</p>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow hover:shadow-xl transition">
-                    <h3 class="text-xl font-semibold">Security Systems</h3>
+                <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition hover-scale">
+                    <h3 class="text-xl font-semibold text-gray-900">Security Systems</h3>
                     <p class="text-gray-600 mt-2">Advanced security and surveillance solutions.</p>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow hover:shadow-xl transition">
-                    <h3 class="text-xl font-semibold">Cloud Solutions</h3>
+                <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition hover-scale">
+                    <h3 class="text-xl font-semibold text-gray-900">Cloud Solutions</h3>
                     <p class="text-gray-600 mt-2">Scalable cloud-native applications and infrastructure.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Project Section -->
+    <section id="projects" class="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto text-center px-4">
+            <h2 class="text-4xl font-bold text-gray-900">Projects</h2>
+            <p class="text-gray-600 mt-2">Comprehensive solutions for your business needs</p>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition hover-scale">
+                    <h3 class="text-xl font-semibold text-gray-900">ADRA Rwanda - Software Development</h3>
+                    <p class="text-gray-600 mt-2">Warehouse Management System</p>
+                </div>
+                <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition hover-scale">
+                    <h3 class="text-xl font-semibold text-gray-900">UNHCR - Security Systems</h3>
+                    <p class="text-gray-600 mt-2">Surveillance System Implementation</p>
+                </div>
+                <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition hover-scale">
+                    <h3 class="text-xl font-semibold text-gray-900">Bonde Construction - Company Website</h3>
+                    <p class="text-gray-600 mt-2">Company profile website</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-gradient-to-r from-orange-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto text-center px-4">
+            <h2 class="text-4xl font-bold text-gray-900">Our Team</h2>
+            <p class="text-gray-600 mt-2">We strive for excellence</p>
+            <div class="grid md:grid-cols-4 gap-8 mt-12">
+                <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition hover-scale">
+                    <h3 class="text-xl font-semibold text-gray-900">Alexi Gasominari</h3>
+                    <p class="text-gray-600 mt-2">MD and Co-Founder</p>
+                </div>
+                <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition hover-scale">
+                    <h3 class="text-xl font-semibold text-gray-900">Janvier Byiringiro</h3>
+                    <p class="text-gray-600 mt-2">CTO and Co-Founder</p>
+                </div>
+                <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition hover-scale">
+                    <h3 class="text-xl font-semibold text-gray-900">Ange Gahamanyi</h3>
+                    <p class="text-gray-600 mt-2">CFO</p>
+                </div>
+                <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition hover-scale">
+                    <h3 class="text-xl font-semibold text-gray-900">Patrick Rukundo</h3>
+                    <p class="text-gray-600 mt-2">Product Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-blue-600 text-center text-white">
-        <h2 class="text-3xl font-bold">Ready to Transform Your Business?</h2>
-        <p class="text-lg mt-2">Let's discuss how we can help you achieve your goals.</p>
-        <button class="mt-6 bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-gray-100 transition">Schedule a Call</button>
+    <section id="contact" class="py-20 gradient-bg text-center text-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-4xl font-bold">Ready to Transform Your Business?</h2>
+            <p class="text-lg mt-2">Let's discuss how we can help you achieve your goals.</p>
+            <button class="mt-6 bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-gray-100 transition">Schedule a Call</button>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 text-center">
-        <p>© 2025 DuoTech. All rights reserved.</p>
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex space-x-4">
+                <a href="#" class="text-gray-400 hover:text-blue-600 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-blue-600 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M512 256c0 127.78-93.62 233.69-216 252.89V330h59.65L367 256h-71v-48.02c0-20.25 9.92-39.98 41.72-39.98H370v-63s-29.3-5-57.31-5c-58.47 0-96.69 35.44-96.69 99.6V256h-65v74h65v178.89C93.62 489.69 0 383.78 0 256 0 114.62 114.62 0 256 0s256 114.62 256 256z"/>
+                        <path fill="#fff" d="M355.65 330 367 256h-71v-48.021c0-20.245 9.918-39.979 41.719-39.979H370v-63s-29.296-5-57.305-5C254.219 100 216 135.44 216 199.6V256h-65v74h65v178.889c13.034 2.045 26.392 3.111 40 3.111s26.966-1.066 40-3.111V330z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="mt-4 md:mt-0">Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | DUO Tech</p>
+        </div>
     </footer>
 </body>
 </html>
